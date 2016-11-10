@@ -20,7 +20,7 @@ export class Home extends Component {
                   <Icon name='ios-arrow-back' />
               </Button>
 
-              <Title>Home</Title>
+              <Title>Home 2</Title>
 
               <Button transparent>
                   <Icon name='ios-menu' />
