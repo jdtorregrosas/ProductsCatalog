@@ -20,8 +20,9 @@ export class Home extends Component {
                   <Icon name='ios-arrow-back' />
               </Button>
 
-              <Title>Home 2</Title>
-
+              <Title>Home</Title>
+              <Text>Bienvenido al catalogo</Text>
+              <Button>Iniciar Sesión</Button>
               <Button transparent>
                   <Icon name='ios-menu' />
               </Button>
@@ -48,4 +49,7 @@ const styles = StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  text : {
+    textAlign: 'center'
+  }
 });
