@@ -8,12 +8,13 @@ import React, { Component } from 'react';
 import {
   AppRegistry
 } from 'react-native';
-import { Home } from './components/home.js';
+//import { Home } from './components/home.js';
+import { Login } from './components/login.js';
 
 export default class ProductsCatalog extends Component {
   render() {
     return (
-      <Home />
+      <Login />
     );
   }
 }
