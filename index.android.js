@@ -9,11 +9,12 @@ import {
   AppRegistry
 } from 'react-native';
 import { Home } from './components/home.js';
+import { Catalog } from './components/catalog.js';
 
 export default class ProductsCatalog extends Component {
   render() {
     return (
-      <Home />
+      <Catalog />
     );
   }
 }
