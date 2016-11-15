@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet,AlertIOS
+  StyleSheet,AlertIOS, Alert
 } from 'react-native';
 import { Container, Content, List, ListItem, InputGroup, Input, Icon,Button  } from 'native-base';
 
@@ -9,16 +9,10 @@ export class Login extends Component {
     super(props);
     this.state = { email: null, password: null };
   }
-  login(){
-        AlertIOS.alert('algo Sync Complete','All your data are belong to us.');
-    if(this.state.email == 'Luis'){
-        AlertIOS.alert('Sync Complete','All your data are belong to us.');
-    }
-    else{
-        AlertIOS.alert('MAL Sync Complete','All your data are belong to us.');
-    }
-  }
  render() {
+  const onButtonPress = () => {
+    Alert.alert('Hola, mi nombre es Julian!');
+  };
     return (
   <Container>
         <Content>
@@ -37,7 +31,7 @@ export class Login extends Component {
                     </InputGroup>
                 </ListItem>
                 <ListItem>
-                	 <Button primary  onPress={this.login()}>
+                	 <Button primary onPress={onButtonPress}>
                         Iniciar Sesión
                     </Button>
                 </ListItem>
