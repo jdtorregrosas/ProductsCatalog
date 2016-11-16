@@ -10,8 +10,14 @@ export class Login extends Component {
     this.state = { email: null, password: null };
   }
  render() {
-  const onButtonPress = () => {
-    Alert.alert('Hola, mi nombre es Julian!');
+  const login = () => {
+    if(this.state.email = '123'){
+      console.log('hola!');
+      Alert.alert('Hola, mi nombre es Julianasdasdasdasdasdasd!');
+    }
+    else {
+      Alert.alert('Mal!');
+    }
   };
     return (
   <Container>
@@ -27,11 +33,11 @@ export class Login extends Component {
                 <ListItem>
                     <InputGroup>
                         <Icon name='ios-unlock' />
-                        <Input ref="password" placeholder='PASSWORD' secureTextEntry={true}/>
+                        <Input ref="password" placeholder='PASSWORDa' secureTextEntry={true}/>
                     </InputGroup>
                 </ListItem>
                 <ListItem>
-                	 <Button primary onPress={onButtonPress}>
+                	 <Button primary onPress={login}>
                         Iniciar Sesión
                     </Button>
                 </ListItem>
