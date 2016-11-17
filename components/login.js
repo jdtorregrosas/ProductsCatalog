@@ -7,11 +7,11 @@ import { Container, Content, List, ListItem, InputGroup, Input, Icon,Button  } f
 export class Login extends Component {
   constructor(props) {
     super(props);
-    this.state = { email: null, password: null };
+    this.state = { email: '', password: '' };
   }
- render() {
-  const login = () => {
-    if(this.state.email = '123'){
+  _login = (email) => {
+    debugger;
+    if(email === '123'){
       console.log('hola!');
       Alert.alert('Hola, mi nombre es Julianasdasdasdasdasdasd!');
     }
@@ -19,6 +19,7 @@ export class Login extends Component {
       Alert.alert('Mal!');
     }
   };
+ render() {
     return (
   <Container>
         <Content>
@@ -26,18 +27,18 @@ export class Login extends Component {
                 <ListItem>
                     <InputGroup>
                         <Icon name='ios-person' />
-                        <Input ref="email" onChangeText={(text) => this.setState({text})} placeholder='EMAIL' />
+                        <Input ref="email" onChangeText={(email) => this.setState({email})} placeholder='EMAIL' />
                     </InputGroup>
                 </ListItem>
             
                 <ListItem>
                     <InputGroup>
                         <Icon name='ios-unlock' />
-                        <Input ref="password" placeholder='PASSWORDa' secureTextEntry={true}/>
+                        <Input ref="password" placeholder='PASSWORD' secureTextEntry={true}/>
                     </InputGroup>
                 </ListItem>
                 <ListItem>
-                	 <Button primary onPress={login}>
+                	 <Button primary onPress={() => this._login(this.state.email)}>
                         Iniciar Sesión
                     </Button>
                 </ListItem>
