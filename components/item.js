@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
-  StyleSheet
+  StyleSheet,
+  AlertIOS
 } from 'react-native';
 import {
   List,
@@ -18,8 +19,13 @@ import {
   Image
 } from 'native-base';
 import {Head} from './head.js';
+import {global} from './global.js';
 export class Item extends Component {
   render() {
+    AlertIOS.alert(
+     'Sync Complete',
+     global.name
+    );
     return (
       <Container>
           <Content>

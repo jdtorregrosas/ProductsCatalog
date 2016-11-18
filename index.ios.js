@@ -7,47 +7,33 @@
 import React, { Component } from 'react';
 import {
   AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  Navigator
 } from 'react-native';
+import { Home } from './components/home.js';
+import { Catalog } from './components/catalog.js';
+import { Item } from './components/item.js';
 
 export default class ProductsCatalog extends Component {
+   renderScene(route, navigator) {
+    if(route.name == 'Catalog') {
+      return <Catalog navigator={navigator} {...route.passProps}  />
+    }
+    if(route.name == 'Home') {
+      return <Home navigator={navigator} {...route.passProps}  />
+    }
+    if(route.name == 'item') {
+      return <Item navigator={navigator} {...route.passProps}  />
+    }
+  }
+  
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
-    );
-  }
+      <Navigator
+        style={{ flex:1 }}
+        initialRoute={{ name: 'Catalog' }}
+        renderScene={ this.renderScene } />
+    )
+  };
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
 
 AppRegistry.registerComponent('ProductsCatalog', () => ProductsCatalog);
