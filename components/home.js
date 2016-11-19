@@ -21,7 +21,8 @@ export class Home extends Component {
               </Button>
 
               <Title>Home</Title>
-
+              <Text>Bienvenido al catalogo</Text>
+              <Button>Iniciar Sesión</Button>
               <Button transparent>
                   <Icon name='ios-menu' />
               </Button>
@@ -30,22 +31,3 @@ export class Home extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});

@@ -9,6 +9,7 @@ import {
   AppRegistry,
   Navigator
 } from 'react-native';
+import { Login } from './components/login.js';
 import { Home } from './components/home.js';
 import { Catalog } from './components/catalog.js';
 import { Item } from './components/item.js';
@@ -32,8 +33,8 @@ export default class ProductsCatalog extends Component {
         style={{ flex:1 }}
         initialRoute={{ name: 'Catalog' }}
         renderScene={ this.renderScene } />
-    )
-  };
+    );
+  }
 }
 
 AppRegistry.registerComponent('ProductsCatalog', () => ProductsCatalog);
