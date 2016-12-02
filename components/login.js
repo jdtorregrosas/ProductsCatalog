@@ -3,8 +3,15 @@ import {
   StyleSheet,AlertIOS, Alert
 } from 'react-native';
 import { Container, Content, List, ListItem, InputGroup, Input, Icon,Button  } from 'native-base';
+import {Head} from './head.js';
 
 export class Login extends Component {
+    _navigate(name) {
+        this.props.navigator.push({
+        name: 'Catalog',
+        message: name
+        })
+    }
   constructor(props) {
     super(props);
     this.state = { email: '', password: '' };
@@ -13,7 +20,8 @@ export class Login extends Component {
     debugger;
     if(email === '123'){
       console.log('hola!');
-      Alert.alert('Hola, mi nombre es Julianasdasdasdasdasdasd!');
+      //Alert.alert('Hola, mi nombre es Julianasdasdasdasdasdasd!');
+      this._navigate('catalog');
     }
     else {
       Alert.alert('Mal!');
@@ -23,6 +31,7 @@ export class Login extends Component {
     return (
   <Container>
         <Content>
+            <Head navigator={this.props.navigator} title='Login'/>
             <List>
                 <ListItem>
                     <InputGroup>

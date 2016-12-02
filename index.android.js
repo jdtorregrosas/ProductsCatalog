@@ -22,8 +22,11 @@ export default class ProductsCatalog extends Component {
     if(route.name == 'Home') {
       return <Home navigator={navigator} {...route.passProps}  />
     }
-    if(route.name == 'item') {
+    if(route.name == 'Item') {
       return <Item navigator={navigator} {...route.passProps}  />
+    }
+    if(route.name == 'Login') {
+      return <Login navigator={navigator} {...route.passProps}  />
     }
   }
   
@@ -31,7 +34,7 @@ export default class ProductsCatalog extends Component {
     return (
       <Navigator
         style={{ flex:1 }}
-        initialRoute={{ name: 'Catalog' }}
+        initialRoute={{ name: 'Login' }}
         renderScene={ this.renderScene } />
     );
   }

@@ -8,25 +8,28 @@ import {
   Header,
   Button,
   Title,
-  Icon
+  Icon,
+  Content
 } from 'native-base';
 
 export class Home extends Component {
   render() {
     return (
       <Container>
+      <Content>
           <Header>
               <Button transparent>
                   <Icon name='ios-arrow-back' />
               </Button>
-
               <Title>Home</Title>
+          </Header>
+          
               <Text>Bienvenido al catalogo</Text>
               <Button>Iniciar Sesión</Button>
               <Button transparent>
                   <Icon name='ios-menu' />
               </Button>
-          </Header>
+              </Content>
       </Container>
     );
   }
