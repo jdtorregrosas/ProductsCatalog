@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {
   StyleSheet,
-  AlertIOS
+  Alert
 } from 'react-native';
 import {
   List,
@@ -22,7 +22,7 @@ import {Head} from './head.js';
 import {global} from './global.js';
 export class Item extends Component {
   render() {
-    AlertIOS.alert(
+    Alert.alert(
      'Sync Complete',
      global.name
     );
